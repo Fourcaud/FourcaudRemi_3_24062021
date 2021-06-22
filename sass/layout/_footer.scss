@@ -1,0 +1,26 @@
+footer {
+  width: 100%;
+  padding-bottom: 20px;
+}
+.footer {
+  background: #1f1f1f;
+  padding-left: 20px;
+  color: $color-white;
+  padding-bottom: 20px;
+  & a {
+    color: $color-white;
+    text-decoration: none;
+  }
+  & i {
+    font-size: large;
+    margin-right: 10px;
+    width: 35px;
+    text-align: center;
+  }
+  & h5 {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}

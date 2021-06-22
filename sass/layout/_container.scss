@@ -1,0 +1,120 @@
+.proj {
+  @include flex-center;
+  background: #d0d0d03b;
+  color: $color-black;
+  & h3 {
+    align-self: flex-start;
+    margin-left: 25px;
+    font-weight: 900;
+    font-size: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  & p {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  & h4 {
+    margin-top: 20px;
+    font-weight: 900;
+    font-size: 1.2em;
+  }
+  &-flex {
+    @include flex-center;
+    margin-bottom: 20px;
+    box-shadow: $shadow;
+    border-radius: 15px;
+    & img {
+      width: map-get($taille-img, widht-img);
+      height: map-get($taille-img, height-img);
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    &__btn {
+      background: none;
+      border: none;
+      font-size: 30px;
+    }
+    &__container {
+      display: flex;
+      width: 90%;
+      justify-content: space-between;
+    }
+  }
+}
+.onglet-nouveau {
+  position: absolute;
+  height: auto;
+  width: 100px;
+  background: #99e2d0;
+  text-align: center;
+  margin-top: 20px;
+  color: #00503c;
+  font-weight: bold;
+}
+
+.map-search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #eaeaea;
+  height: 85px;
+  background: linear-gradient(0deg, #b2b2b293 95%, #909090c2);
+  color: $color-black;
+  & i {
+    font-size: x-large;
+    width: 50px;
+  }
+  & h1 {
+    font-size: larger;
+  }
+}
+.search {
+  color: $color-black;
+  @include flex-center;
+  background: #d0d0d03b;
+  & h2 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 900;
+  }
+  & p {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 600;
+  }
+}
+.info {
+  color: $color-black;
+  @include flex-center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  height: 400px;
+  &__chiffres {
+    border-radius: 15px;
+    background-color: #9356dc;
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    text-align: center;
+    left: 4%;
+    font-size: x-large;
+  }
+  &__text {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left;
+    width: 70%;
+  }
+  & h3 {
+    align-self: flex-start;
+    margin-left: 25px;
+    font-weight: 900;
+    font-size: 1.3em;
+  }
+  & i {
+    width: 10%;
+  }
+}

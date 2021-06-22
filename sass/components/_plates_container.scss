@@ -1,0 +1,145 @@
+.container-restaurants {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background: #f6f6f6;
+
+  margin-top: -200px;
+  display: inline-table;
+  width: 100%;
+  & h1 {
+    margin-left: 25px;
+    font-family: $font_logo_title;
+  }
+}
+.choix {
+  color: $color-black;
+  & h2 {
+    text-transform: uppercase;
+    position: relative;
+    padding-top: 20px;
+    font-weight: 400;
+    padding-left: 25px;
+  }
+  & h2::after {
+    content: "";
+    width: 60px;
+    height: 5px;
+    background-color: #99e2d0;
+    position: absolute;
+    left: 27px;
+    bottom: 0;
+  }
+
+  & h3 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 50%;
+  }
+  & p {
+    font-weight: 400;
+
+    font-size: 0.8em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 50%;
+  }
+  & h4 {
+    height: 40px;
+    width: 40px;
+    font-weight: 500;
+  }
+  &__flex {
+    @include flex-center;
+  }
+  &__plat {
+    height: 70px;
+    width: 90%;
+    margin: 10px 0 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    box-shadow: $shadow;
+    border-radius: 15px;
+    background: $color-white;
+    border: none;
+    &__nom {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-left: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    &__anim {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    border-left: 0 solid #00ff99;
+
+    & i {
+      visibility: hidden;
+      opacity: 0;
+      color: $color-white;
+    }
+    &__icone {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.2s linear;
+      width: 0;
+      color: $color-white;
+    }
+    &:hover i {
+      transform-origin: 50% 50%;
+      transition: all 500ms 500ms ease-in-out;
+      transform: rotate(-1turn);
+      visibility: visible;
+      opacity: 1;
+      color: $color-white;
+      font-size: x-large;
+    }
+    &:hover &__icone {
+      transition: all 500ms ease-in-out;
+      height: 70px;
+      width: 70px;
+      opacity: 1;
+      visibility: visible;
+      background: #99e2d0;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-white;
+    }
+  }
+}
+
+.nom-restaurant {
+  color: $color-black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.img-menu img {
+  width: map-get($taille-img-restaurants, widht-img);
+  height: map-get($taille-img-restaurants, height-img);
+  object-fit: cover;
+}
+
+.animation-entrees {
+  animation: animation-entrees 2s cubic-bezier(0.39, 0.575, 0.565, 2) both;
+}
+.animation-plats {
+  animation: animation-plats 2s 1s cubic-bezier(0.39, 0.575, 0.565, 2) both;
+}
+.animation-desserts {
+  animation: animation-desserts 2s 2s cubic-bezier(0.39, 0.575, 0.565, 2) both;
+}
