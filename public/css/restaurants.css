@@ -160,6 +160,7 @@ header__logo {
   padding-top: 20px;
   font-weight: 400;
   padding-left: 25px;
+  font-size: 1.3em;
 }
 .choix h2::after {
   content: "";
@@ -175,6 +176,7 @@ header__logo {
   text-overflow: ellipsis;
   overflow: hidden;
   height: 50%;
+  font-size: 1em;
 }
 .choix p {
   font-weight: 400;
@@ -224,25 +226,25 @@ header__logo {
   visibility: hidden;
   opacity: 0;
   color: #fff;
+  transform: rotate(-360deg);
 }
 .choix__plat__icone {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.2s linear;
   width: 0;
   color: #fff;
 }
 .choix__plat:hover i {
   transform-origin: 50% 50%;
-  transition: all 500ms 500ms ease-in-out;
-  transform: rotate(-1turn);
+  transition: 0.4s ease-out;
+  transform: rotate(0deg);
   visibility: visible;
   opacity: 1;
   color: #fff;
   font-size: x-large;
 }
 .choix__plat:hover .choix__plat__icone {
-  transition: all 500ms ease-in-out;
+  transition: 0.4s ease-out;
   height: 70px;
   width: 70px;
   opacity: 1;
@@ -610,7 +612,7 @@ header__logo {
   font-size: x-large;
 }
 .info__text {
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
   text-align: left;
   width: 70%;
