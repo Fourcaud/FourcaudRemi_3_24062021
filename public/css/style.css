@@ -212,6 +212,7 @@ header__logo {
   width: 60%;
 }
 .header i {
+  margin-left: 10px;
   color: #000000;
   float: left;
   font-size: x-large;
